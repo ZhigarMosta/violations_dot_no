@@ -1,0 +1,243 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: top 0.3s;
+    z-index: 5;
+}
+
+.header.visible {
+    top: 0;
+}
+.container-header {
+    background: #32353e;
+
+    display: flex;
+    justify-content: center;
+    padding: 0px 2.99%;
+}
+.img {
+    width: 70px;
+    height: 70px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu_toggle {
+    display: none;
+}
+.menu_button_container {
+    display: flex;
+    width: 40px;
+}
+.menu_button,
+.menu_button::before,
+.menu_button::after {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+.menu_button::before {
+    content: "";
+    margin-top: -8px;
+}
+.menu_button::after {
+    content: "";
+    margin-top: 8px;
+}
+.menu_button_container {
+    display: none;
+}
+
+.menu_toggle:checked + .logo__wrapper .menu_button::before {
+    margin-top: 0;
+    transform: rotate(45deg);
+}
+.menu_toggle:checked + .logo__wrapper .menu_button::after {
+    margin-top: 0;
+    transform: rotate(-45deg);
+}
+.menu_toggle:checked + .logo__wrapper .menu_button {
+    background: transparent;
+}
+.text {
+    font-family: "CeraPro", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.04em;
+    color: #fff;
+    max-height: 23px;
+    cursor: pointer;
+    transition: color 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.text:hover {
+    color: #b1daef;
+    transition: color 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.container_footer {
+    padding: 28px 84px 28px 0px;
+    min-height: 224px;
+    background: #32353e;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.main_footer__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logo {
+    width: 119px;
+    height: 105px;
+    color: #fff;
+    font-size: 30px;
+
+    display: flex;
+    align-items: center;
+}
+.navigation__container {
+    width: 100%;
+    max-width: 699px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.contacts__container {
+    width: 100%;
+    max-width: 175px;
+}
+.protected {
+    font-family: "CeraPro", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.04em;
+    color: #959595;
+    margin-left: 21px;
+}
+.right__container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+main {
+    margin-top: 70px;
+    min-height: calc(100vh - 350px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0;
+}
+
+@media (max-width: 1160px) {
+    .container {
+        padding: 20px 21px 15px 8px;
+    }
+}
+@media (max-width: 800px) {
+    .logo {
+        width: 119px;
+        height: 105px;
+        color: #fff;
+        font-size: 15px;
+    
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width: 730px) {
+    .right__container {
+        flex-direction: column;
+        max-width: 175px;
+        gap: 20px;
+    }
+    .navigation__container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .right__container {
+        max-width: 140px;
+    }
+}
+@media (max-width: 600px) {
+    .text {
+        font-size: 15px;
+    }
+}
+@media (max-width: 450px) {
+    .text {
+        font-size: 18px;
+    }
+    .logo__wrapper {
+        display: flex;
+        width: 100%;
+        max-width: 550px;
+        justify-content: space-between;
+        padding: 10px 2.99%;
+        z-index: 2;
+        background-color: #32353e;
+    }
+    .img {
+        width: 50px;
+        height: 50px;
+    }
+    .menu_button_container {
+        display: flex;
+    }
+    .wrapper {
+        top: -220px;
+        margin-top: 61px;
+        position: absolute;
+        z-index: 1;
+        transition: top 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: #32353e;
+        padding: 10px;
+        margin-left: 12px;
+    }
+    .menu:last-child {
+        border-bottom-left-radius: 27px;
+        border-bottom-right-radius: 27px;
+    }
+    .menu_toggle:checked ~ .wrapper {
+        top: 98px;
+        transition: top 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+}
+@media (max-width: 1100px) {
+    .menu {
+        max-width: 451px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}

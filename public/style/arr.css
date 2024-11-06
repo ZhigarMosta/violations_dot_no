@@ -1,0 +1,27 @@
+.menu__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card__container {
+    width: 300px;
+}
+.card__img {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.text__container {
+    width: 100%;
+    height: 120px;
+    background-color: #b1daef;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}

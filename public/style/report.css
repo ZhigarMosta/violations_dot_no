@@ -1,0 +1,85 @@
+.container__report {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.wrapper__report {
+    padding: 15px;
+    background-color: #b1daef;
+    border-radius: 15px;
+    gap: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.created_at__report {
+    color: #fff;
+}
+.container__btn-create_reports {
+    position: fixed;
+    margin-left: 95%;
+    bottom: 50px;
+    padding: 20px;
+}
+.btn-create_reports {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 15px;
+    color: #fff;
+}
+.wrapper__form {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.form_reports {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    margin-top: -160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #b1daef;
+}
+.wrapper__content_form {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.number__create_reports {
+    width: 100%;
+    background-color: #fff;
+}
+.description__create_reports {
+    background-color: #fff;
+}
+.btn__create_reports {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 15px;
+}
+.close-modal__reports {
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -25px;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 15px;
+}
