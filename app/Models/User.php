@@ -57,4 +57,8 @@ class User extends Authenticatable
         return $this->role === self::ADMIN_ROLE;
     }
 
+
+    public function fullName(){
+        return $this->lastname." ".$this->name." ".$this->middlename;
+    }
 }
