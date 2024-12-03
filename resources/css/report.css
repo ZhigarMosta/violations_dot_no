@@ -1,0 +1,124 @@
+.container__report {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.created_at__report {
+    color: #ff0000;
+}
+.container__btn-create_reports {
+    position: fixed;
+    margin-left: 95%;
+    bottom: 50px;
+    padding: 20px;
+}
+.btn-create_reports {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 15px;
+    color: #fff;
+}
+.wrapper__form {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.form_reports {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    margin-top: -160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.wrapper__content_form {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.number__create_reports {
+    width: 100%;
+    background-color: #fff;
+}
+.description__create_reports {
+    background-color: #fff;
+}
+.btn__create_reports {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 15px;
+}
+.close-modal__reports {
+    position: absolute;
+    margin-left: 360px;
+    margin-top: -45px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.main-content--report {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+}
+.del-up--report {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.del-report {
+    color: #051aff;
+}
+.del-update {
+    color: #ff0000;
+}
+.status-new-report {
+    color: #000;
+    font-weight: bolder;
+    text-align: end;
+}
+.status-refused-report {
+    color: #ff0000;
+    font-weight: bolder;
+    text-align: center;
+}
+.status-confirmed-report {
+    color: #051aff;
+    font-weight: bolder;
+    text-align: center;
+}
+.create-report {
+    background-color: #ff0000;
+    border-radius: 5px;
+    width: 206px;
+    height: 48px;
+
+    margin-top: 10px;
+
+    color: #fff;
+    font-weight: bolder;
+}

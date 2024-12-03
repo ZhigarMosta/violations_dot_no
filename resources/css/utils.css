@@ -1,0 +1,18 @@
+.logo-first {
+    font-size: 48px;
+    color: #051aff;
+}
+.logo-second {
+    color: #ff0000;
+}
+.auth_register-text{
+    text-align: center;
+    color: #051aff;
+    font-size: 32px;
+}
+.container-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
