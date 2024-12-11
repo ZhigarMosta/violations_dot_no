@@ -16,3 +16,15 @@
     justify-content: start;
     align-items: start;
 }
+@media(max-width:800px){
+    .logo-first {
+        font-size: 36px;
+        color: #051aff;
+    }
+}
+@media(max-width:700px){
+    .logo-first {
+        font-size: 24px;
+        color: #051aff;
+    }
+}

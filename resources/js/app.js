@@ -1,15 +1,18 @@
-import './bootstrap';
+import "./bootstrap";
 
-import Alpine from 'alpinejs';
+import Alpine from "alpinejs";
+import mask from "@alpinejs/mask";
+Alpine.plugin(mask);
 
-// import IMask from 'imask';
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+function closeModal(){
+    document.getElementById('modal').style.display = 'none';
+}
 
-// IMask(
-//     document.getElementById('tel'),
-//     {
-//       mask: '+{7}(000)000-00-00'
-//     }
-//   )
+window.openModal = openModal;
+window.closeModal = closeModal;
 
 window.Alpine = Alpine;
 

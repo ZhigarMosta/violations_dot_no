@@ -1,13 +1,5 @@
 <x-app-layout>
     <x-slot name="header">
-        <script>
-            function openModal(){
-                document.getElementById('modal').style.display = 'block';
-            }
-            function closeModal(){
-                document.getElementById('modal').style.display = 'none';
-            }
-        </script>
         <div class="container-header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Список заявления') }}
@@ -15,14 +7,24 @@
             <button class="create-report" onclick="openModal()">создать заявление</button>
         </div>
     </x-slot>
-        <!-- <div class="py-12"> -->
-
             <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
                 <div class="dg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="container__report">
                         @foreach($reports as $report)
                             <div class="wrapper__report">
-                                <p class="created_at__report">{{ $report['updated_at'] }}</p>
+                                <div class="del-up--report">
+                                    <p class="created_at__report">{{ \Carbon\Carbon::parse($report['updated_at'])->translatedFormat("j m Y") }}</p>
+                                    @if($report->statuse->name == 'новое')
+                                    <div class="del-up_container">
+                                        <form method="POST" action="{{route('reports.destroy', $report->id)}}">
+                                            @method('delete')
+                                            @csrf
+                                            <input class="del-update" type="submit" value="Удалить">
+                                        </form>
+                                        <a class="del-report" href="{{route('report.show', $report->id)}}">обновить</a>
+                                    </div>
+                                    @endif
+                                </div>
                                 <div class="main-content--report">
                                     <p>{{ $report['number'] }}</p>
                                     <p>{{ $report['description'] }}</p>
@@ -35,14 +37,6 @@
                                     @if ($report->statuse->name == 'подтверждено')
                                         <p class="status-confirmed-report" >{{ $report->statuse->name }}</p>
                                     @endif
-                                    <div class="del-up--report">
-                                        <form method="POST" action="{{route('reports.destroy', $report->id)}}">
-                                            @method('delete')
-                                            @csrf
-                                            <input class="del-update" type="submit" value="Удалить">
-                                        </form>
-                                        <a class="del-report" href="{{route('report.show', $report->id)}}">обновить</a>
-                                    </div>
                                 </div>
                             </div>
                         @endforeach
@@ -72,6 +66,4 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
-
 </x-app-layout>

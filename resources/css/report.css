@@ -86,9 +86,12 @@
 }
 .del-up--report {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+.del-up_container{
+    display: flex;
+    gap:10px;
 }
 .del-report {
     color: #051aff;

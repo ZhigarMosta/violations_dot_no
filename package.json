@@ -17,6 +17,7 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@alpinejs/mask": "^3.14.7",
         "imask": "^7.6.1"
     }
 }
